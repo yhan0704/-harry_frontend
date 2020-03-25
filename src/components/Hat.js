@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Hat extends Component{
+const USER = process.env.REACT_APP_USER_URL;
 
+export default class Hat extends Component{
 
     postUser(house){
    
@@ -16,7 +17,7 @@ export default class Hat extends Component{
           house: house
         })
     }
-        fetch('http://localhost:3000/users', objectConfig)
+        fetch(USER, objectConfig)
         .then(res => res.json())
         .then(user => this.props.setCurrentUser(user))
     }

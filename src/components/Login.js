@@ -29,7 +29,7 @@ export default class Login extends Component{
             <div className="ui inverted form">
               <div className="one field">
                 <div className="field">
-                  <label id='firstName'>Name</label>
+                  <label id='firstName'>Log In</label>
                   <input placeholder="Name" type="text" onChange={this.props.setLogInUser}/>
                 </div>
              

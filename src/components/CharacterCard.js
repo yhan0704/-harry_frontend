@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
-export default class CharacterCard extends Component{
+const CHARACTER_URL = process.env.REACT_APP_CHARACTER_URL;
+const FAVORITE_CHARACTER_URL = process.env.REACT_APP_FAVORITE_CHARACTER_URL;
 
+export default class CharacterCard extends Component{
     addToFavorites = (e) => {
        
       let user =  this.props.currentUser.characters.filter(char => char.id === parseInt(e.currentTarget.dataset.id,10))
         if(user.length === 0){
+            window.alert("Wizard added!")
         let objectConfig = {
             method: 'POST',
             headers: {
@@ -16,7 +19,7 @@ export default class CharacterCard extends Component{
              character_id: e.currentTarget.dataset.id
             })
         }
-            fetch('http://127.0.0.1:3000/favorite_characters', objectConfig)
+            fetch(CHARACTER_URL, objectConfig)
             .then(res => res.json())
             .then(user => this.props.updateUsers(user))
         }else{
@@ -37,7 +40,7 @@ export default class CharacterCard extends Component{
              user_id: e.currentTarget.dataset.userId
             })
           }
-            fetch(`http://127.0.0.1:3000/favorite_characters/${fav_character.id}`, objectConfig)
+            fetch(FAVORITE_CHARACTER_URL/`${fav_character.id}`, objectConfig)
             .then(res => res.json())
             .then(user => this.props.updateUsers(user))
     }

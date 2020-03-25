@@ -2,8 +2,11 @@ import React, { Component, Fragment } from 'react'
 import CharacterCard from '../components/CharacterCard'
 import SpellCard from '../components/SpellCard'
 
-export default class FavoritesContainer extends Component{
 
+const FAVORITE_CHARACTER_URL = process.env.REACT_APP_FAVORITE_CHARACTER_URL;
+const FAVORITE_SPELL = process.env.REACT_APP_FAVORITE_SPELL_URL;
+
+export default class FavoritesContainer extends Component{
 
   constructor(){
     super()
@@ -14,7 +17,7 @@ export default class FavoritesContainer extends Component{
     }
 
     componentDidMount(){
-        fetch("http://localhost:3000/favorite_characters")
+        fetch(FAVORITE_CHARACTER_URL)
         .then(res => res.json())
         .then(fav_characters => {
             this.setState({
@@ -22,7 +25,7 @@ export default class FavoritesContainer extends Component{
             })
         })
 
-        fetch("http://localhost:3000/favorite_spells")
+        fetch(FAVORITE_SPELL)
         .then(res => res.json())
         .then(fav_spells => {
             this.setState({
@@ -38,10 +41,6 @@ export default class FavoritesContainer extends Component{
                 
             <div className="characterCardBackground">
             <div className="ui category search">
-            <div className="ui icon input">
-                <input className="prompt" type="text" placeholder="Search..."/>
-                <i className="search icon"></i>
-            </div>
             <div className="results"></div>
             </div>
             <h1 className="favoriteChaSpell">Favorite Character(s)</h1>

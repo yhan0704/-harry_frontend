@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const FAVORITE_SPELL = process.env.REACT_APP_FAVORITE_SPELL_URL
+
 export default class SpellCard extends Component{
     
     addToFavorites = (e) => {
@@ -20,7 +22,7 @@ export default class SpellCard extends Component{
              spell_id: e.currentTarget.dataset.id
             })
         }
-            fetch('http://127.0.0.1:3000/favorite_spells', objectConfig)
+            fetch(FAVORITE_SPELL, objectConfig)
             .then(res => res.json())
             .then(user => this.props.updateUsers(user))
         }else{
@@ -41,7 +43,7 @@ export default class SpellCard extends Component{
                  user_id: e.currentTarget.dataset.userId
                 })
               }
-                fetch(`http://127.0.0.1:3000/favorite_spells/${fav_spell.id}`, objectConfig)
+                fetch(FAVORITE_SPELL/`${fav_spell.id}`, objectConfig)
                 .then(res => res.json())
                 .then(user => this.props.updateUsers(user))
         }

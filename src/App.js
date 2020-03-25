@@ -11,6 +11,9 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import FavoritesContainer from './containers/FavoritesContainer';
 
+const CHARACTER_URL = process.env.REACT_APP_CHARACTER_URL;
+const SPELL_URL = process.env.REACT_APP_SPELL_URL;
+const USER_URL = process.env.REACT_APP_USER_URL;
 
 class App extends React.Component{
 
@@ -81,7 +84,7 @@ class App extends React.Component{
 
   componentDidMount(){
 
-      fetch("http://localhost:3000/characters")
+      fetch(CHARACTER_URL)
       .then(res=>res.json())
       .then(characters=> {
         this.setState({
@@ -89,7 +92,7 @@ class App extends React.Component{
         })
       })
 
-      fetch("http://localhost:3000/spells")
+      fetch(SPELL_URL)
       .then(res => res.json())
       .then(spells=>{
         this.setState({
@@ -97,7 +100,7 @@ class App extends React.Component{
         })
       })
 
-      fetch("http://localhost:3000/users")
+      fetch(USER_URL)
       .then(res => res.json())
       .then(users=>{
         this.setState({
@@ -112,7 +115,6 @@ class App extends React.Component{
   return (
     <Switch>
       <Route exact path='/'           component={Welcome}/>
-
       <Route exact path='/hat'        render={()=> this.state.validName   ? <Hat setCurrentUser={this.setCurrentUserSignUp} userName={this.state.logInUser}/>  : <Redirect to ='signup'/>}/>
       <Route exact path='/favorites'  render={()=> this.state.currentUser ? <FavoritesContainer updateUsers={this.updateUsers} characters={this.state.characters} currentUser={this.state.currentUser}/> : <Redirect to ="/login"/>}/>
       <Route exact path='/main'       render={()=> this.state.currentUser ? <Main userInfo={this.state.currentUser}/> : <Redirect to ="/login"/>}/> 

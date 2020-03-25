@@ -26,7 +26,6 @@ export default class Welcome extends Component{
     }
 
     render() {
-        console.log(this.state.audio)
         return (
             <div className="backgroundWelcome">                
                 <audio id="player" autoPlay controls> <source ref='audio_tag' src={sound} type="audio/mp3"/></audio>

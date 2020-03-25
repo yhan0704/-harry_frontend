@@ -3,7 +3,6 @@ import {  NavLink } from 'react-router-dom';
 
 class Main extends React.Component{
   render(){
-    console.log(this.props.userInfo.house)
       return(
         <Fragment>
       <div className="mainContainer">
