@@ -1,0 +1,92 @@
+/* body{
+  background-color:white;
+  background:url('./download.jpeg');
+} */
+
+#image{
+  width: 500px;
+  height: 600px;
+  background: url("./harry_image.png") no-repeat;
+  background-size: 440px;
+}
+
+#buttonImage{
+  width: 400px;
+  height: 250px;
+  background: url('./imgage.gif') no-repeat;
+  background-size:350px;
+
+}
+
+.mainContainer{
+  height:100vh;
+  margin-left:15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundMain{
+  position: relative;
+  display: inline;
+  /* padding-bottom:400px; */
+}
+
+#cards{
+  width: 900px;
+  margin-right: 63px;
+  margin-top: 35px;
+}
+
+.ui.category.search{
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.hatContainer{
+  height:100vh;
+}
+
+#hatImage{
+  margin-top:10%;
+  margin-left:13%;
+}
+
+.hatImagePosition{
+  margin-top:5%;
+  margin-left:30%;
+}
+
+.hatFontButton{
+  padding-top:2%;
+  text-align: center;
+}
+#signupFrame{
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+#hatFrame{
+  background:url('./imgage.gif') no-repeat;
+  background-size: 700px;
+  width:800px;
+  height:500px;
+}
+
+.clickContinue{
+  font-size:40px;
+}
+
+.favoriteChaSpell{
+  text-align: center;
+}
+
+.btn.btn-secondary.welcome h1{
+  color:black;
+}
+
+.audioPosition{
+  display: block;
+  text-align: left;
+}

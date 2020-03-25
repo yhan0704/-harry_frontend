@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap');
+ 
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.ui.category.search{
+  margin-top:0;
+  padding-top:15px;
+  text-align: center;
+}
+
+.backgroundWelcome{
+  width: 100%;
+  height: 0;
+  padding-top: 4.5%;
+  
+}
+
+.logInContainer{
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#firstName{
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+#muggle{
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+#solemnly{
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+#subButton{
+  margin-top: 30px;
+}
+
+@font-face { font-family: JuneBug; src: url('HARRYP__.TTF'); } 
+h1 {
+   /* font-family: JuneBug; */
+   font-family: 'Reenie Beanie', cursive;
+   font-size:100px;
+}
+
+.welcomePrhase{
+  margin-top: -55px;
+  font-family: JuneBug;
+  text-align: center;
+  font-size:200px;
+  color:rgb(0, 4, 8);
+  
+}
+.btn.btn-secondary{
+  font-family: myFirstFont;
+  /* margin-top:10%;
+  margin-left:20%;
+  height:20vh; */
+  background-color:rgb(0, 2, 3);
+}
+
+
+
+.welcomeButtonContainer{
+  /* height:100%; */
+  margin-top:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.welcomeAudioButton{
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  bottom: -4vw;
+}
+
+
+
+.ui.inverted.puple.table{
+  width:800px;
+  margin:auto;
+  margin-top:5px;
+  table-layout: fixed;
+  font-size:18px;
+}
+
+#shield{
+  margin-left: 10px;
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border-style: solid;
+}
+
+#cards{
+  width:58%;
+  margin-left:68px;
+  margin-top:83px;
+}
+#image.ui.cards{
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left:6px;
+  padding-right:0;
+}
+
+.image{
+  margin-right:5px;
+}
+
+.ui.cards:first-child{
+  margin-top:12px;
+}
+
+body{
+  background-image: url("https://pixelz.cc/wp-content/uploads/2016/11/uhd-4k-wallpaper-vintage-paper-texture.jpg");
+  background-size: 100%;
+  font-family: 'Reenie Beanie', cursive;
+  font-size:18px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+#line{
+  z-index: 1;
+  color: #f1f1f1
+}
+/* 
+.backgroundMain{
+    background-image: url('https://media.giphy.com/media/pYCZPDymIVjeo/giphy.gif');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+} */
+#favWiz{
+  font-size: 40px;
+}
+#mainName{
+  font-size: 50px;
+}
+
+#houseInfo{
+  font-size: 40px;
+}
+
+
+.mainbuttonContainer{
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn.btn-warning.characterMain{
+  width:250px;
+  height:160px;
+  margin:0;
+  margin-left:50px;
+  margin-top:40px;
+  padding:0;
+  font-size:80px;
+  background-color:black;
+}
+
+.btn.btn-warning.spellMain{
+  width:250px;
+  height:160px;
+  margin:0;
+  margin-left:50px;
+  margin-top:40px;
+  padding:0;
+  font-size:80px;
+  background-color:black;
+}
+
+.characterMain a{
+  color:gray
+}
+
+.spellMain{
+  margin-top:38vh;
+  margin-left:12vw;
+  margin-right:4vw;
+  padding:48px 82px;
+  font-size:80px;
+  background-color:black;
+}
+.spellMain a{
+  color:gray
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button.btn.btn-secondary.welcome{
+  border-style: solid;
+  border-color: #400867;
+  border-width: thick;
+}
+
+.btn.btn-secondary.welcome h1{
+  color: white;
+}
+
+.explanaition{
+  text-align: center;
+  margin-top: 2vw;
+  margin-bottom: -148px;
+  margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.explanaitionText{
+  font-size: 61px;
+  font-family: 'Reenie Beanie', cursive;
+  
+}
